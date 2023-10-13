@@ -6,7 +6,7 @@ ENV APORTS /home/builder/aports
 
 # install required packages to build "alpine linux" packages
 RUN apk add --update --no-cache --no-progress \
-    alpine-sdk coreutils bash \
+    alpine-sdk atools coreutils bash \
     sudo diffutils
 
 # setup directory for built packages
