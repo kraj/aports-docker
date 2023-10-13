@@ -2,7 +2,7 @@ FROM alpine:edge as build
 
 ENV APORTS /home/builder/aports 
 
-RUN apk add abuild curl tar make linux-headers patch g++ git gcc ncurses-dev autoconf file
+RUN apk add abuild atools curl tar make linux-headers patch g++ git gcc ncurses-dev autoconf file
 RUN printf "export JOBS=$(getconf _NPROCESSORS_ONLN)\nexport MAKEFLAGS=-j$(getconf _NPROCESSORS_ONLN)\n" >> /etc/abuild.conf
 
 RUN adduser -G abuild -D builder
